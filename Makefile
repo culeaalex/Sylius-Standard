@@ -5,7 +5,7 @@ DOCKER_USER ?= "$(shell id -u):$(shell id -g)"
 ENV ?= "dev"
 
 init:
-	@#make -s docker-compose-check
+	@make -s docker-compose-check
 	@if [ ! -e compose.override.yml ]; then \
 		cp compose.override.dist.yml compose.override.yml; \
 	fi
