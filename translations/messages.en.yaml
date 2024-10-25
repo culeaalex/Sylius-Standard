@@ -1,0 +1,3 @@
+cart:
+    form:
+        qty_alert: 'Great Choice!'
