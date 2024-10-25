@@ -42,6 +42,6 @@ node-watch:
 	@ENV=$(ENV) DOCKER_USER=$(DOCKER_USER) $(DOCKER_COMPOSE) run --rm -i nodejs "npm run watch"
 
 docker-compose-check:
-	@which $(DOCKER_COMPOSE) > /dev/null || (echo "Please install docker compose binary" && exit 1)
+	@$(DOCKER_COMPOSE) version > /dev/null || (echo "Please install docker compose binary" && exit 1)
 	@echo "You are using \"$(DOCKER_COMPOSE)\" binary"
 	@echo "Current version is \"$$($(DOCKER_COMPOSE) version)\""
